@@ -1,0 +1,358 @@
+/* HomeHeader.css */
+.header {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    padding: 10px;
+    color: white;
+    position: relative;
+  }
+  body{
+    overflow-x: hidden;
+  }
+  .logoImg
+  {
+    transition: transform 0.8s ease-in-out; 
+  }
+  .logoImg:hover
+  {
+      width: 2rem;
+      transform: rotate(360deg);
+  }
+  
+  .menu-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .hamburger:hover .line {
+    background-color: #ff6347; /* Change color on hover (example: tomato) */
+  }
+  
+  .line {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: background-color 0.3s;
+  }
+  
+  .menu-content {
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 200px;
+  }
+  
+  .menu-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu-content ul li {
+    margin: 10px 0;
+  }
+  
+  .menu-content ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+  
+  .menu-content ul li a:hover {
+    color: #ff6347; /* Change color on hover (example: tomato) */
+  }
+  
+  .desktop-menu {
+    display: none; /* Hidden by default on mobile screens */
+  }
+  
+  .desktop-menu ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .desktop-menu ul li {
+    margin: 0 15px;
+  }
+  
+  .desktop-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+  
+  .desktop-menu ul li a:hover {
+    color: #ff6347; /* Change color on hover (example: tomato) */
+  }
+
+  /* Page2 */
+
+  .why-choose-us {
+    background-color: #1C1C1C; /* Dark background color */
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .subtitle {
+    color: #E31E32; /* Orange/red color for subtitle */
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  
+  .title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color:white;
+  }
+  
+  .features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .feature {
+    max-width: 250px;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition for hover effects */
+  }
+  
+  .feature:hover {
+    background-color: #333333; /* Change box background color on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+  }
+  
+  .icon {
+    font-size: 50px;
+    background-color: #333333; /* Default background color */
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff; /* Icon color */
+    transition: transform 0.8s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Smooth transition for hover effects */
+  }
+  
+  .feature:hover .icon {
+    transform: rotate(360deg); /* Rotate icon on hover */
+    background-color: inherit; /* Keep the icon's color */
+    color: #fff; /* Ensure icon text stays white */
+  }
+  
+  .icon:hover {
+    transform: rotate(360deg); /* Add rotation on hover */
+    background-color: white;
+  }
+  
+  .feature-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color:white;
+  }
+  
+  .feature-text {
+    font-size: 14px;
+    color: #cccccc; /* Slightly lighter color for text */
+  }
+  
+  
+  /* Animations */
+  .menu-enter {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  
+  .menu-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 300ms, transform 300ms;
+  }
+  
+  .menu-exit {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .menu-exit-active {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 300ms, transform 300ms;
+  }
+  
+  
+  
+/* Animation for Heading */
+@keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-heading {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #FF4C4C; /* Aesthetic red color */
+    animation: fadeInUp 1s ease-out forwards;
+  }
+  
+  .animate-subheading {
+    font-size: 1.5rem;
+    color: white;
+    animation: fadeInUp 1.5s ease-out forwards; /* Subheading animation with delay */
+    animation-delay: 0.5s;
+  }
+  @keyframes floatUp {
+    0% {
+      transform: translateY(100vh) scale(0.5);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-50vh) scale(1);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes floatUp {
+    0% {
+      transform: translateY(100vh) scale(0.5);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-50vh) scale(1);
+      opacity: 0;
+    }
+  }
+  
+  /* Bubble styles */
+  .bubble-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Ensures bubbles don't interfere with user actions */
+    overflow: hidden;
+  }
+  
+  .bubble {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    animation: floatUp 10s ease-in 10s;
+    opacity: 0;
+  }
+  
+  /* Specific styles for each bubble's position and animation delay */
+  .bubble1 {
+    left: 5%;
+    animation-delay: 0s;
+  }
+
+  
+/* FOOTER */
+/* Footer.css */
+.footer {
+    background-color: #1C1C1C;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .footer-section {
+    flex: 1 1 200px;
+    margin: 10px;
+  }
+  
+  .footer-section h2 {
+    font-size: 18px;
+    border-bottom: 2px solid #E31E32; /* Change color to your preferred accent */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-section p, .footer-section ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+  }
+  
+  .footer-section ul li {
+    margin: 10px 0;
+  }
+  
+  .footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-section ul li a:hover {
+    color: #ff6347; /* Change color to your preferred accent */
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .social-icon {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 24px; /* Adjust size as needed */
+  }
+  
+  .social-icon:hover {
+    background-color: #ff6347; /* Change color to your preferred accent */
+    color: #000;
+  }
+  
+  /* Ensure Font Awesome icons are loaded */
