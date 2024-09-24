@@ -1,0 +1,20 @@
+@media screen and (max-width:600px) {
+    .container{
+        flex-direction: column;
+        margin: 10px;
+    }
+    .circle-container{
+        left: 0;
+      }
+}
+@media screen and (max-width:400px) {
+    .top-buttons Button {
+        margin: 2px;
+    }
+    .activity-link a {
+        margin: 10px;
+    }
+    .profile-summary {
+        margin: 6px;
+    }
+}
