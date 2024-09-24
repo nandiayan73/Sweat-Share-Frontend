@@ -5,11 +5,13 @@ const HomeHeader=()=>{
     const [isOpen, setIsOpen] = useState(false);
     const menuRef = useRef(null);
     const hamburgerRef = useRef(null);
-    const toggleMenu = () => {
+    const toggleMenu = () => 
+      {
         setIsOpen(!isOpen);
       };
   
-      const handleClickOutside = (event) => {
+      const handleClickOutside = (event) => 
+      {
         if (
           menuRef.current &&
           !menuRef.current.contains(event.target) &&
@@ -19,7 +21,8 @@ const HomeHeader=()=>{
         }
       };
     
-      useEffect(() => {
+      useEffect(() => 
+      {
         document.addEventListener('mousedown', handleClickOutside);
         return () => {
           document.removeEventListener('mousedown', handleClickOutside);
@@ -35,7 +38,7 @@ const HomeHeader=()=>{
 							<a href="/"><img style={{width:"25%"}}  className="logoImg"  src="images/Home/logo.png" alt="SweatShare"></img></a>
 						</div>
                         {/* Header */}
-                        <header className="header">
+                        <header className="header2">
                             <div className="menu-container">
                                 <div
                                 className="hamburger"
@@ -55,8 +58,7 @@ const HomeHeader=()=>{
                                 <nav className="menu-content" ref={menuRef}>
                                     <ul>
                                     <li><a href="/login">Sign Up</a></li>
-                                    <li><a href="/register">Login</a></li>
-                                  
+                                    <li><a href="/register">Login</a></li>                                  
                                     </ul>
                                 </nav>
                                 </CSSTransition>

@@ -1,3 +1,4 @@
+import SignupForm from "./SignUp";
 const Page1=()=>{
 return(<>
     	<section class="banner-area relative">
@@ -10,7 +11,7 @@ return(<>
 							<h2 className="animate-subheading" style={{color:"white"}}>Social Media For Gymbros</h2>
 							<p class="text-white animate-subheading">Sweat Today / Shine Tomorrow</p>
                             <br></br>
-                            <button class="gym-signup-button animate-subheading">Sign Up</button>
+                            {/* <button class="gym-signup-button animate-subheading">Sign Up</button> */}
                             <div className="bubble-container">
                                 {Array.from({ length: 10 }).map((_, index) => (
                                 <img
@@ -21,13 +22,13 @@ return(<>
                                 />
                                 ))}
                             </div>
+					<SignupForm></SignupForm>
 						</div>
 					</div>
 				</div>
 			</div>
             
 		</section>
-
 </>)
 }
 export default Page1;

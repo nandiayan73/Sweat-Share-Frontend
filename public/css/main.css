@@ -1968,20 +1968,23 @@ nav a:hover {
 
 /* Gym Sign Up Button Style */
 .gym-signup-button {
-  background-color: #FF4C4C; /* Aesthetic red color */
-  color: white;
+  background-color: transparent !important; /* Forces background to be transparent */
+  color: white; /* Ensures the text is visible */
   font-size: 18px;
   font-weight: bold;
   padding: 15px 30px;
-  border: none;
+  border: 2px solid white; /* Adds a white border for visibility */
   border-radius: 1px;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
+
+
 .gym-signup-button:hover {
-  background-color: #000000; /* Slightly darker red on hover */
+  background-color: #fff; /* Slightly darker red on hover */
+  color: #000;
   border-radius: 2px;
   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
   transform: translateY(-3px);

@@ -19,7 +19,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black; /* Background color for the form side */
+    background-color: rgb(31, 3, 3); /* Background color for the form side */
   }
   
   .register-card {
@@ -32,7 +32,7 @@
     animation: fadeIn 1s ease-in-out;
   }
   
-  h2 {
+  .register-card h2 {
     margin-bottom: 20px;
     color: #333;
     text-align: center;
